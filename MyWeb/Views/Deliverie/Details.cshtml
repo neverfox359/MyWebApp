@@ -1,0 +1,34 @@
+﻿@model MyWeb.Models.Delivery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Delivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Discipline.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discipline.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sportsman.SurName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sportsman.SurName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DeliveryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
